@@ -1,10 +1,9 @@
 # 1.0.0 (2025-08-24)
 
-
 ### Bug Fixes
 
-* enable release ([00aa98f](https://github.com/jeeyoungk/kitchensink/commit/00aa98f95386f8d798d5cb58e49a3ed0595325fc))
-* provenance: true ([b524d82](https://github.com/jeeyoungk/kitchensink/commit/b524d82bda52a7ed71db7a21beeb24a76916153f))
+- enable release ([00aa98f](https://github.com/jeeyoungk/kitchensink/commit/00aa98f95386f8d798d5cb58e49a3ed0595325fc))
+- provenance: true ([b524d82](https://github.com/jeeyoungk/kitchensink/commit/b524d82bda52a7ed71db7a21beeb24a76916153f))
 
 ### 0.3.0 (2023-11-21)
 
