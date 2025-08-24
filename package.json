@@ -68,7 +68,8 @@
     "test:unit": "vitest run --passWithNoTests"
   },
   "publishConfig": {
-    "provenance": true
+    "provenance": true,
+    "access": "public"
   },
   "type": "module",
   "version": "1.0.0",
