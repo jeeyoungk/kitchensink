@@ -67,6 +67,9 @@
     "test:type": "tsc",
     "test:unit": "vitest run --passWithNoTests"
   },
+  "publishConfig": {
+    "provenance": true
+  },
   "type": "module",
   "version": "0.0.0",
   "packageManager": "bun@1.1.34"
