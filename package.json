@@ -4,6 +4,7 @@
   },
   "description": "...",
   "devDependencies": {
+    "@arethetypeswrong/cli": "^0.18.2",
     "@evilmartians/lefthook": "^1.9.0",
     "@semantic-release/changelog": "^6.0.3",
     "@semantic-release/commit-analyzer": "^13.0.1",
@@ -16,17 +17,18 @@
     "@typescript-eslint/eslint-plugin": "^8.39.1",
     "@typescript-eslint/parser": "^8.39.1",
     "@vitest/coverage-v8": "^2.0.5",
+    "eslint": "^9.0.0",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-jsonc": "^2.20.1",
-    "eslint": "^9.0.0",
     "globals": "^16.3.0",
-    "prettier-plugin-organize-imports": "^4.2.0",
     "prettier": "^3.3.3",
+    "prettier-plugin-organize-imports": "^4.2.0",
     "semantic-release": "^24.2.7",
+    "tsup": "^8.5.0",
     "tsx": "^4.20.4",
     "typedoc": "^0.27.2",
-    "typescript-eslint": "^8.39.1",
     "typescript": "^5.5.4",
+    "typescript-eslint": "^8.39.1",
     "vitest": "^2.0.5"
   },
   "files": [
@@ -40,9 +42,14 @@
   "types": "./dist/index.d.ts",
   "exports": {
     ".": {
-      "types": "./dist/index.d.ts",
-      "import": "./dist/index.js",
-      "require": "./dist/index.cjs"
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
     }
   },
   "name": "@jeeyoungk/kitchensink",
@@ -52,8 +59,9 @@
     "url": "git+https://github.com/jeeyoungk/kitchensink.git"
   },
   "scripts": {
-    "build": "./build.ts",
-    "check": "bun run check:format && bun run check:lint",
+    "build": "tsup",
+    "check": "bun run check:format && bun run check:lint && bun run check:attw",
+    "check:attw": "attw --pack .",
     "check:format": "prettier --check .",
     "check:lint": "eslint .",
     "clean": "rm -rf dist docs",
