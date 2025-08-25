@@ -1,3 +1,11 @@
+## [1.0.1](https://github.com/jeeyoungk/kitchensink/compare/v1.0.0...v1.0.1) (2025-08-24)
+
+
+### Bug Fixes
+
+* access public ([1fc16a8](https://github.com/jeeyoungk/kitchensink/commit/1fc16a85bf4c79e7639841d0b3a0b4bebf4fb72d))
+* set initial version ([02425ef](https://github.com/jeeyoungk/kitchensink/commit/02425ef2ff5febd745156952cccbfdb8483dcaed))
+
 # 1.0.0 (2025-08-24)
 
 ### Bug Fixes
