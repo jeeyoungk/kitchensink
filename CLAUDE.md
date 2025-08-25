@@ -7,7 +7,7 @@ This file contains useful information for Claude when working on this project.
 This is a modern TypeScript Node.js starter template with the following stack:
 
 - **Runtime**: Bun (package manager and runtime)
-- **Build Tool**: tsup (TypeScript bundler)
+- **Build Tool**: bun build (native bundler)
 - **Execution**: tsx (TypeScript execution)
 - **Testing**: Vitest
 - **Linting**: ESLint v9 with flat config
@@ -18,7 +18,7 @@ This is a modern TypeScript Node.js starter template with the following stack:
 
 ## Key Scripts
 
-- `bun run build` - Build the project with tsup
+- `bun run build` - Build the project with bun build
 - `bun run test` - Run type checking and unit tests
 - `bun run test:type` - Run TypeScript type checking only
 - `bun run test:unit` - Run unit tests only
@@ -37,7 +37,6 @@ This is a modern TypeScript Node.js starter template with the following stack:
 ## Configuration Files
 
 - `tsconfig.json` - TypeScript configuration with strict settings
-- `tsup.config.ts` - Build configuration for dual CJS/ESM output
 - `eslint.config.js` - ESLint v9 flat configuration
 - `prettier.config.mjs` - Prettier configuration with organize imports
 - `.releaserc.json` - Semantic release configuration
@@ -83,7 +82,7 @@ This is a template repository. After cloning:
 
 - Configured for ESM modules (`"type": "module"`)
 - TypeScript is configured with strict settings and `noEmit: true`
-- Build uses tsup with automatic cleaning via `clean: true` option
+- Build uses bun build with automatic cleaning via build script
 - Clean script uses native `rm -rf` instead of rimraf
 - All quality checks run in CI and must pass before merge
 - Dual module support with proper exports for CJS/ESM compatibility
