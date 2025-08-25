@@ -1,1 +1,1 @@
-export * from "./MyClass.js";
+export * from "./chain.js";
