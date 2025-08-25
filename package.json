@@ -50,6 +50,16 @@
         "types": "./dist/index.d.cts",
         "default": "./dist/index.cjs"
       }
+    },
+    "./chain": {
+      "import": {
+        "types": "./dist/chain.d.ts",
+        "default": "./dist/chain.js"
+      },
+      "require": {
+        "types": "./dist/chain.d.cts",
+        "default": "./dist/chain.cjs"
+      }
     }
   },
   "name": "@jeeyoungk/kitchensink",
@@ -61,7 +71,7 @@
   "scripts": {
     "build": "tsup",
     "check": "bun run check:format && bun run check:lint && bun run check:attw",
-    "check:attw": "attw --pack .",
+    "check:attw": "attw --pack . --profile node16",
     "check:format": "prettier --check .",
     "check:lint": "eslint .",
     "clean": "rm -rf dist docs",
