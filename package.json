@@ -80,7 +80,6 @@
     "fix": "bun run fix:format && bun run fix:lint",
     "fix:format": "prettier --write .",
     "fix:lint": "eslint . --fix",
-    "release": "semantic-release",
     "test": "bun run test:type && bun run test:unit",
     "test:type": "tsc",
     "test:unit": "vitest run --passWithNoTests"

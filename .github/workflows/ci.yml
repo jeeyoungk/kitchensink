@@ -69,3 +69,33 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: bun run release
+      - name: Release and Publish
+        id: semantic_release
+        run: |
+          # Store git HEAD before semantic-release
+          BEFORE_SHA=$(git rev-parse HEAD)
+          echo "before_sha=$BEFORE_SHA" >> $GITHUB_OUTPUT
+
+          # Run semantic-release
+          bun run semantic-release
+
+          # Check if semantic-release created a new commit (indicating a release)
+          AFTER_SHA=$(git rev-parse HEAD)
+          if [ "$BEFORE_SHA" != "$AFTER_SHA" ]; then
+            echo "new_release=true" >> $GITHUB_OUTPUT
+            echo "latest_tag=$(git describe --tags --abbrev=0)" >> $GITHUB_OUTPUT
+          else
+            echo "new_release=false" >> $GITHUB_OUTPUT
+          fi
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+      - name: Generate documentation
+        if: always() && steps.semantic_release.outputs.new_release == 'true'
+        run: bun run docs
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        if: always() && steps.semantic_release.outputs.new_release == 'true'
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./docs
