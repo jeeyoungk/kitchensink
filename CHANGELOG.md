@@ -1,3 +1,18 @@
+## [1.0.3](https://github.com/jeeyoungk/kitchensink/compare/v1.0.2...v1.0.3) (2025-08-29)
+
+
+### Bug Fixes
+
+* bring back semantic-release ([c9fce56](https://github.com/jeeyoungk/kitchensink/commit/c9fce56dd791fe226f10cbc57272dd33ad80a253))
+* checking types ([bb3d8b4](https://github.com/jeeyoungk/kitchensink/commit/bb3d8b45466f25f1ebc3285089721ef8c303fad3))
+* fixing the release ([24f7fb0](https://github.com/jeeyoungk/kitchensink/commit/24f7fb0d18528743b4beef967c4642eabcd267fe))
+* remove unused files ([eb66162](https://github.com/jeeyoungk/kitchensink/commit/eb661626c646f81dc10bc2178d1b634ec508ff92))
+
+
+### Features
+
+* add tagged string implementation for URL templating ([d6f778f](https://github.com/jeeyoungk/kitchensink/commit/d6f778f9f438d58c5347878ab0b9c5372a4c9e09))
+
 ## [1.0.2](https://github.com/jeeyoungk/kitchensink/compare/v1.0.1...v1.0.2) (2025-08-25)
 
 
