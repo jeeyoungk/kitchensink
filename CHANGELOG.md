@@ -1,3 +1,10 @@
+## [1.0.5](https://github.com/jeeyoungk/kitchensink/compare/v1.0.4...v1.0.5) (2025-08-29)
+
+
+### Bug Fixes
+
+* enable splitting ([fd82811](https://github.com/jeeyoungk/kitchensink/commit/fd82811bf91ebc9897c8dfc7290993846526332a))
+
 ## [1.0.4](https://github.com/jeeyoungk/kitchensink/compare/v1.0.3...v1.0.4) (2025-08-29)
 
 
