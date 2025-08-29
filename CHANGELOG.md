@@ -1,3 +1,10 @@
+## [1.0.4](https://github.com/jeeyoungk/kitchensink/compare/v1.0.3...v1.0.4) (2025-08-29)
+
+
+### Bug Fixes
+
+* typedoc ([631cbb3](https://github.com/jeeyoungk/kitchensink/commit/631cbb31e4db0bd11bac586f7046acc3269c0102))
+
 ## [1.0.3](https://github.com/jeeyoungk/kitchensink/compare/v1.0.2...v1.0.3) (2025-08-29)
 
 
