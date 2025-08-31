@@ -1,3 +1,10 @@
+## [1.0.6](https://github.com/jeeyoungk/kitchensink/compare/v1.0.5...v1.0.6) (2025-08-31)
+
+
+### Bug Fixes
+
+* deploy ([e3f67cd](https://github.com/jeeyoungk/kitchensink/commit/e3f67cd437b03e18f1eaf517e996a8dca864407d))
+
 ## [1.0.5](https://github.com/jeeyoungk/kitchensink/compare/v1.0.4...v1.0.5) (2025-08-29)
 
 
